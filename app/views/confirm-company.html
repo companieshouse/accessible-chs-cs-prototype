@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Confirm this is the correct company – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+        Confirm this is the correct company
+      </h1>
+
+      
+
+
+    <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Company number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01234567
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Actice
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Incorporation date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      30 November 1995
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">07700 900457</p>
+      <p class="govuk-body">sarah.phillips@example.com</p>
+    </dd>
+  </div>
+</dl>
+      
+
+        
+
+        {{ govukButton({
+          text: "Confirm and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
