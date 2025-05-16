@@ -1,3 +1,8 @@
 {
-  "serviceName": "Service name goes here"
+  "serviceName": "File a confirmation statement",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
 }
