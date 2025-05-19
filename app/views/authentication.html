@@ -23,20 +23,26 @@
 
       <p class="govuk-body">To file company information you will need an authentication code</p>
 
-      <p class="govuk-body">Authenticating for</p>
-      
+      <p> 
+        <span class="govuk-body">Authenticating for</span>
+        <span class="govuk-heading-m">CROISSANT COMPANY (01234567)</span>
+      </p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="width-10">
+          Authentication code
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+      </div>
 
      
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
 
         {{ govukButton({
-          text: "Continue"
+          text: "Authenticate"
         }) }}
+
+      <p class="govuk-body"><a href="#">Request an authentication code</a></p>
 
       </form>
 
