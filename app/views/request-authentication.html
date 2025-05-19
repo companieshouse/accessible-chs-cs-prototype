@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+       Request an authentication code
+      </h1>
+
+      <p>
+        <span class="govuk-body">Request an authentication code for</span>
+        <span class="govuk-heading-m">CROISSANT COMPANY (01234567)</span>
+      </p>
+
+      <p class="govuk-body">The authentication code will be sent by post to the registered office address.</p>
+
+{# Is this the right way to HTML address? Why has it italicised it? #}
+      <address class="govuk-body govuk-!-font-weight-bold">
+        123 Croissant Street<br>
+        Croissant City<br>
+        Croissant County<br>
+        CR0 1ST
+      </address>
+
+
+{# This way with P tags also still italicised #}
+       {# <address>
+        <p class="govuk-body govuk-!-font-weight-bold">
+        123 Croissant Street<br>
+        Croissant City<br>
+        Croissant County<br>
+        CR0 1ST
+        </p>
+      </address> #}
+
+       
+
+        {{ govukButton({
+          text: "Request authentication code"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
