@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  File a confirmation statement – {{ serviceName }} 
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,18 +15,82 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+       <form class="form" action="/path/of/next/page" method="post">
 
       <h1 class="govuk-heading-l">
-        Heading or question goes here
+       File a confirmation statement
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <p class="govuk-body">Check and confirm that the company information we have on record is correct as of 19 May 2025.</p>
 
-        <p>
-          [Insert question content here - see the
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-          for examples]
-        </p>
+      <p class="govuk-body">You have checked X of Y sections.</p>
+
+
+     <h2 class="govuk-heading-m">
+       Nature of business
+      </h2>
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="#">SIC codes</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag">
+        Completed
+      </strong>
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="#">Statement of capital</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+      </dl>
+       
+
+     <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Sarah Philips
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      5 January 1978
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London<br>SE23 6FH
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Contact details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">07700 900457</p>
+      <p class="govuk-body">sarah.phillips@example.com</p>
+    </dd>
+  </div>
+</dl>
+
+       
 
         {{ govukButton({
           text: "Continue"
