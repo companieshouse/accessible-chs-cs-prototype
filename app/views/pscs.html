@@ -1,0 +1,168 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check the people with significant control (PSCs) details – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+       Check the people with significant control (PSCs) details
+      </h1>
+
+      <p class="govuk-body">A person with significant control (PSC) is anyone who:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has more than 25% of the company's shares or voting rights</li>
+        <li>can appoint or remove a majority of the directors</li>
+        <li>can influence or control the company</li>
+      </ul>
+      <p class="govuk-body">For more information, <a href="#" class="govuk-link">read the guidance on PSCs</a>. </p>
+
+
+      <h2 class="govuk-heading-m">
+        1 individual person
+      </h2>
+
+      
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      FLOUR, Fiona
+    </h2>
+    <td class="govuk-table__cell">
+      <strong class="govuk-tag govuk-tag--green">
+          Active
+      </strong><span class="govuk-visually-hidden"> director </span>
+    </td>
+
+  </div>
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nationality
+        </dt>
+        <dd class="govuk-summary-list__value">
+          British
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Country of residence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UK
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          10 February 1985
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Appointment date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          08 October 2006
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Occupation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Director
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Correspondence address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <address class="govuk-body">10 Bakery Lane, Croissant City, Croissantland, C14 4TU</address>
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nature of control
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>75% or more of shares held as a person</li>
+            <li>75% or more voting rights as a person</li>
+          </ul>
+        </dd>  
+      </div>
+
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="officers">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        Are the PSC details correct?
+      </h2>
+    </legend>
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="psc" name="psc" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="officers">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="psc-2" name="psc" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="psc-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="psc-3" name="psc" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="psc-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+        
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
