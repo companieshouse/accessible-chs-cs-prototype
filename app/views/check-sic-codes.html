@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Check the standard industrial classification (SIC) codes – {{ serviceName }} 
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,14 +27,50 @@
 
       <p class="govuk-body">Our records show these SIC codes for the company:</p>
 
-      <p class="govuk-body govuk-!-font-weight-bold">43210</p> <p class="govuk-body">Electrical installation</p> <p class="govuk-body govuk-!-font-weight-bold">43230</p>
+      <p class="govuk-body"><strong>43210</strong> - Electrical installation </p> 
 
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sicCode">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        Are the SIC codes correct?
+      </h2>
+    </legend>
+    
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sicCode" name="sicCode" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="sicCode">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sicCode-2" name="sicCode" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="sicCode-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
         
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+       {# <div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Return to checklist
+  </button>
+</div> #}
 
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+  <a class="govuk-link" href="#">Return to checklist</a>
+</div>
       </form>
 
     </div>
