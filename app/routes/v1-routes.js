@@ -23,4 +23,15 @@ router.post('/v1/company-number', function (req, res) {
     res.redirect('/v1/confirm-company')
 })
 
+router.post('/v1/confirm-company', function (req, res) {
+
+    res.redirect('/v1/authentication')
+})
+
+
+router.post('/v1/authentication', function (req, res) {
+
+    res.redirect('/v1/check-trading-status')
+})
+
 module.exports=router;
