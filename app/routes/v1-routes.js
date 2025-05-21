@@ -41,16 +41,36 @@ router.post('/v1/check-trading-status', function (req, res) {
 })
 
 
-
-// router.post('/v1/check-trading-status', function (req, res) {
+// routing based on buttons, what about based on radio selection? What if user says no?
+// router.post('/v1/check-sic-codes', function (req, res) {
 //   const action = req.body.action;
-//   if (action === 'submit-next') {
-//     res.redirect('/address-lookup/static-list-of-addresses');
-//   } else if (action === 'return') {
-//     res.redirect('/tasklist');
-//   } else {
-//     res.redirect('/v1/check-trading-status');
+//   if (action === 'sic-next') {
+//     res.redirect('/check-statement-of-capital');
+//   } 
+//   else {
+//     res.redirect('/v1/tasklist');
 //   }
 // })
+
+// routing based on buttons, how about radio selection too? What happens if user says no, or no but has been submitted??
+router.post('/v1/check-sic-codes', function (req, res) {
+  if (req.body['sic-submit-next']) {
+    res.redirect('/v1/check-statement-of-capital');
+  } else if (req.body['sic-submit-return']) {
+    res.redirect('/v1/tasklist');
+  } else {
+    res.redirect('/v1/check-sic-codes'); // fallback
+  }
+})
+
+router.post('/v1/check-statement-of-capital', function (req, res) {
+  if (req.body['capital-submit-next']) {
+    res.redirect('/v1/officers');
+  } else if (req.body['capital-submit-return']) {
+    res.redirect('/v1/tasklist');
+  } else {
+    res.redirect('/v1/check-sic-codes'); // fallback
+  }
+})
 
 module.exports=router;
