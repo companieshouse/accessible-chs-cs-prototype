@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Submit the confirmation statement – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+        Submit the confirmation statement
+      </h1>
+
+      
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="submit-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <dl class="govuk-fieldset__heading">
+        Company name: Croissant Company
+        <br>
+        Company number: 01234567
+        <br>
+        Confirmation statement due: 20 May 2026
+      </dl>
+      
+    </legend>
+    <div id="submit-hint" class="govuk-hint">
+      Select all that apply
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="submit" name="submit" type="checkbox" value="confirm-delivered">
+        <label class="govuk-label govuk-checkboxes__label" for="submit">
+         I confirm that all information required to be delivered by the company pursuant to <a href="#" class="govuk-link">section 853A(1)(a) of the Companies Act 2006</a> in relation to the confirmation period ending 29 April 2026 either has been delivered or is being delivered with this statement.
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="submit-2" name="submit" type="checkbox" value="confirm-lawful">
+        <label class="govuk-label govuk-checkboxes__label" for="submit-2">
+          I confirm that the intended future activities of the company are lawful.
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+        
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Confirm and submit
+        </button>
+
+      
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
