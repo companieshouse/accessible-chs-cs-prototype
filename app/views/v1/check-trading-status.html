@@ -28,9 +28,9 @@
        <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="sharesTradingStatus">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
+      <h2 class="govuk-fieldset__heading">
        Is the trading status of shares correct?
-      </h1>
+      </h2>
     </legend>
     {# <div id="sharesTradingStatus-hint" class="govuk-hint">
       This includes changing your last name or spelling your name differently
@@ -52,9 +52,15 @@
   </fieldset>
 </div>
 
-        {{ govukButton({
-          text: "Continue"
-        }) }}
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
 
       </form>
 
