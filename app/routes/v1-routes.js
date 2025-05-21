@@ -35,7 +35,7 @@ router.post('/v1/authentication', function (req, res) {
 })
 
 //where does this go if user selects 'no'?
-router.post('/v1check-trading-status', function (req, res) {
+router.post('/v1/check-trading-status', function (req, res) {
 
     res.redirect('/v1/tasklist')
 })
