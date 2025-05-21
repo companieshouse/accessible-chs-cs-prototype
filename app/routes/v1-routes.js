@@ -34,4 +34,23 @@ router.post('/v1/authentication', function (req, res) {
     res.redirect('/v1/check-trading-status')
 })
 
+//where does this go if user selects 'no'?
+router.post('/v1check-trading-status', function (req, res) {
+
+    res.redirect('/v1/tasklist')
+})
+
+
+
+// router.post('/v1/check-trading-status', function (req, res) {
+//   const action = req.body.action;
+//   if (action === 'submit-next') {
+//     res.redirect('/address-lookup/static-list-of-addresses');
+//   } else if (action === 'return') {
+//     res.redirect('/tasklist');
+//   } else {
+//     res.redirect('/v1/check-trading-status');
+//   }
+// })
+
 module.exports=router;
