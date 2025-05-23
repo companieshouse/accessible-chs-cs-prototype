@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+        You need to update the company details
+      </h1>
+
+     
+
+        <p class="govuk-body">
+          You will need to update the officer details on our
+          <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">WebFiling service (opens in a new tab)</a> before you can file a confirmation statement.
+        </p>
+        
+        <p class="govuk-body">
+          Return to this window after you have made the update
+        </p>
+
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Have you updated the officer details?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="updateOfficers" name="updateOfficers" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="updateOfficers">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="updateOfficers-2" name="updateOfficers" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="updateOfficers-2">
+          No, I do not need to update the officer details
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+        {{ govukButton({
+          text: "Return to confirmation statement"
+        }) }}
+
+
+<p class="govuk-body"><a href="#">What did you think of this service?</a>(takes 2 minutes)</p>
+
+       
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
