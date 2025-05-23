@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   You cannot use this service – {{ serviceName }} 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <form class="form" action="you-cannot-use-this-service" method="post">
+
+      <h1 class="govuk-heading-l">
+        You cannot use this service
+      </h1>
+
+      <p class="govuk-body">
+        You must update this information by filing a confirmation statement through our <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">WebFiling service (opens in a new tab)</a>. You will need to sign in to or create a WebFiling account to do this
+      </p>
+
+      <p class="govuk-body">
+       <a href="#">What did you think of this service?</a>(takes 2 minutes)
+      </p>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
