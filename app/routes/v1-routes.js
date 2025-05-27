@@ -160,6 +160,36 @@ router.post('/v1/officers', function (req, res) {
   }
 });
 
+// pscs routing
+
+router.post('/v1/pscs', function (req, res) {
+  const psc = req.body.psc; // 'yes' or 'no'
+  if (req.body['psc-submit']) {
+    if (psc === 'yes') {
+      res.redirect('/v1/shareholders');
+    } else if (psc === 'no') {
+      res.redirect('/v1/update-psc-details'); 
+    } else if (psc === 'noUpdate') {
+      res.redirect('/v1/shareholders'); 
+    } 
+    else {
+      res.redirect('/v1/psc'); // fallback if nothing selected
+    }
+  } else if (req.body['psc-submit-return']) {
+    // If the user clicks 'return', redirect to tasklist
+      if (psc === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (psc === 'no') {
+      res.redirect('/v1/update-psc-details'); 
+      }
+      else if (psc === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+      }
+  } else {
+    res.redirect('/v1/psc'); // fallback
+  }
+});
+
 
 
 

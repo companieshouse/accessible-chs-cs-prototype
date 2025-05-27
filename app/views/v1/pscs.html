@@ -15,7 +15,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="pscs" method="post">
 
       <h1 class="govuk-heading-l">
        Check the people with significant control (PSCs) details
@@ -119,7 +119,7 @@
 
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="officers">
+  <fieldset class="govuk-fieldset" aria-describedby="psc">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
         Are the PSC details correct?
@@ -128,7 +128,7 @@
     <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="psc" name="psc" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="officers">
+        <label class="govuk-label govuk-radios__label" for="psc">
           Yes
         </label>
       </div>
@@ -152,10 +152,10 @@
         
 
   <div class="govuk-button-group">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+    <button name="psc-submit" value="psc-submit" type="submit" class="govuk-button" data-module="govuk-button">
       Sumbit and go to next section
     </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <button name="psc-submit-return" value="psc-submit-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Submit and return to tasklist
     </button>
   </div>
