@@ -34,35 +34,68 @@ router.post('/v1/authentication', function (req, res) {
     res.redirect('/v1/check-trading-status')
 })
 
-//where does this go if user selects 'no'?
+// //where does this go if user selects 'no'?
+// router.post('/v1/check-trading-status', function (req, res) {
+
+//     res.redirect('/v1/tasklist')
+// })
+
+// route for trading status
+
 router.post('/v1/check-trading-status', function (req, res) {
+  const answer = req.body.sharesTradingStatus; // 'yes' or 'no'
+  if (answer === 'yes') {
+    res.redirect('/v1/tasklist');
+  }  else {
+    res.redirect('/v1/you-cannot-use-this-service'); // fallback or error
+  }
+});
 
-    res.redirect('/v1/tasklist')
-})
 
 
-// routing based on buttons, what about based on radio selection? What if user says no?
+
+// routing based on buttons, how about radio selection too? What happens if user says no, or no but has been submitted??
 // router.post('/v1/check-sic-codes', function (req, res) {
-//   const action = req.body.action;
-//   if (action === 'sic-next') {
-//     res.redirect('/check-statement-of-capital');
-//   } 
-//   else {
+//   if (req.body['sic-submit-next']) {
+//     res.redirect('/v1/check-statement-of-capital');
+//   } else if (req.body['sic-submit-return']) {
 //     res.redirect('/v1/tasklist');
+//   } else {
+//     res.redirect('/v1/check-sic-codes'); // fallback
 //   }
 // })
 
-// routing based on buttons, how about radio selection too? What happens if user says no, or no but has been submitted??
+
 router.post('/v1/check-sic-codes', function (req, res) {
+  const sicCode = req.body.sicCode; // 'yes' or 'no'
   if (req.body['sic-submit-next']) {
-    res.redirect('/v1/check-statement-of-capital');
+    if (sicCode === 'yes') {
+      res.redirect('/v1/check-statement-of-capital');
+    } else if (sicCode === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+    } else {
+      res.redirect('/v1/check-sic-codes'); // fallback if nothing selected
+    }
   } else if (req.body['sic-submit-return']) {
-    res.redirect('/v1/tasklist');
+    // If the user clicks 'return', redirect to tasklist
+      if (sicCode === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (sicCode === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+      }
   } else {
     res.redirect('/v1/check-sic-codes'); // fallback
   }
-})
+});
 
+
+
+
+
+
+
+
+// routing based on buttons, how about radio selection too? What happens if user says no, or no but has been submitted??
 router.post('/v1/check-statement-of-capital', function (req, res) {
   if (req.body['capital-submit-next']) {
     res.redirect('/v1/officers');
@@ -72,5 +105,9 @@ router.post('/v1/check-statement-of-capital', function (req, res) {
     res.redirect('/v1/check-sic-codes'); // fallback
   }
 })
+
+
+
+
 
 module.exports=router;
