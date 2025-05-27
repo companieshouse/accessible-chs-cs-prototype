@@ -65,7 +65,7 @@ router.post('/v1/check-trading-status', function (req, res) {
 //   }
 // })
 
-
+// SIC code routing
 router.post('/v1/check-sic-codes', function (req, res) {
   const sicCode = req.body.sicCode; // 'yes' or 'no'
   if (req.body['sic-submit-next']) {
@@ -88,23 +88,78 @@ router.post('/v1/check-sic-codes', function (req, res) {
   }
 });
 
-
-
-
-
-
-
-
 // routing based on buttons, how about radio selection too? What happens if user says no, or no but has been submitted??
+// router.post('/v1/check-statement-of-capital', function (req, res) {
+//   if (req.body['capital-submit-next']) {
+//     res.redirect('/v1/officers');
+//   } else if (req.body['capital-submit-return']) {
+//     res.redirect('/v1/tasklist');
+//   } else {
+//     res.redirect('/v1/check-sic-codes'); // fallback
+//   }
+// })
+
+
+//statement of capital routing
+
 router.post('/v1/check-statement-of-capital', function (req, res) {
+  const statementOfCapital = req.body.statementOfCapital; // 'yes' or 'no'
   if (req.body['capital-submit-next']) {
-    res.redirect('/v1/officers');
+    if (statementOfCapital === 'yes') {
+      res.redirect('/v1/officers');
+    } else if (statementOfCapital === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+    } else if (statementOfCapital === 'noUpdate') {
+      res.redirect('/v1/officers'); 
+    } 
+    else {
+      res.redirect('/v1/check-statement-of-capital'); // fallback if nothing selected
+    }
   } else if (req.body['capital-submit-return']) {
-    res.redirect('/v1/tasklist');
+    // If the user clicks 'return', redirect to tasklist
+      if (statementOfCapital === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (statementOfCapital === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+      }
+      else if (statementOfCapital === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+      }
   } else {
-    res.redirect('/v1/check-sic-codes'); // fallback
+    res.redirect('/v1/check-statement-of-capital'); // fallback
   }
-})
+});
+
+// officers routing
+
+router.post('/v1/officers', function (req, res) {
+  const officers = req.body.officers; // 'yes' or 'no'
+  if (req.body['officer-submit']) {
+    if (officers === 'yes') {
+      res.redirect('/v1/pscs');
+    } else if (officers === 'no') {
+      res.redirect('/v1/update-officer-details'); 
+    } else if (officers === 'noUpdate') {
+      res.redirect('/v1/pscs'); 
+    } 
+    else {
+      res.redirect('/v1/officers'); // fallback if nothing selected
+    }
+  } else if (req.body['officer-submit-return']) {
+    // If the user clicks 'return', redirect to tasklist
+      if (officers === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (officers === 'no') {
+      res.redirect('/v1/update-officer-details'); 
+      }
+      else if (officers === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+      }
+  } else {
+    res.redirect('/v1/officers'); // fallback
+  }
+});
+
 
 
 
