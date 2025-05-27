@@ -25,7 +25,7 @@
 
      
  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="pscStatement">
+  <fieldset class="govuk-fieldset" aria-describedby="registeredEmail">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
        Is the registered email address correct?
@@ -48,7 +48,7 @@
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="registeredEmail-3" name="registeredEmail" type="radio" value="no">
+        <input class="govuk-radios__input" id="registeredEmail-3" name="registeredEmail" type="radio" value="noUpdate">
         <label class="govuk-label govuk-radios__label" for="registeredEmail-3">
           No, but an update has been submitted
         </label>
@@ -58,10 +58,10 @@
 </div>
 
   <div class="govuk-button-group">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+    <button name="email-submit" value="email-submit" type="submit" class="govuk-button" data-module="govuk-button">
       Sumbit and go to next section
     </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <button name="email-submit-return" value="email-submit-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Submit and return to tasklist
     </button>
   </div>

@@ -214,7 +214,35 @@ router.post('/v1/shareholders', function (req, res) {
   }
 });
 
+// registered email address routing
 
+router.post('/v1/registered-email-address', function (req, res) {
+  const registeredEmail = req.body.registeredEmail; // 'yes' or 'no'
+  if (req.body['email-submit']) {
+    if (registeredEmail === 'yes') {
+      res.redirect('/v1/registered-office-address');
+    } else if (registeredEmail === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+    } else if (registeredEmail === 'noUpdate') {
+      res.redirect('/v1/registered-office-address'); 
+    } 
+    else {
+      res.redirect('/v1/registered-email-address'); // fallback if nothing selected
+    }
+  } else if (req.body['email-submit-return']) {
+    // If the user clicks 'return', redirect to tasklist
+      if (registeredEmail === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (registeredEmail === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+      }
+      else if (registeredEmail === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+      }
+  } else {
+    res.redirect('/v1/registered-email-address'); // fallback
+  }
+});
 
 
 module.exports=router;
