@@ -15,7 +15,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form" action="company-records" method="post">
 
       <h1 class="govuk-heading-l">
         Check where the company records are kept
@@ -26,10 +26,10 @@
       
 
        <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="pscStatement">
+  <fieldset class="govuk-fieldset" aria-describedby="companyRecords">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
-       Is the registered email address correct?
+       Is this where the company records are kept?
       </h2>
     </legend>
     {# <div id="sharesTradingStatus-hint" class="govuk-hint">
@@ -37,20 +37,20 @@
     </div> #}
     <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="registeredEmail" name="registeredEmail" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="registeredEmail">
+        <input class="govuk-radios__input" id="companyRecords" name="companyRecords" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="companyRecords">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="registeredEmail-2" name="registeredEmail" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="registeredEmail-2">
+        <input class="govuk-radios__input" id="companyRecords-2" name="companyRecords" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="companyRecords-2">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="registeredEmail-3" name="registeredEmail" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="registeredEmail-3">
+        <input class="govuk-radios__input" id="companyRecords-3" name="companyRecords" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="companyRecords-3">
           No, but an update has been submitted
         </label>
       </div>
@@ -58,14 +58,11 @@
   </fieldset>
 </div>
 
-  <div class="govuk-button-group">
+  
     <button type="submit" class="govuk-button" data-module="govuk-button">
-      Sumbit and go to next section
+      Sumbit and return to tasklist
     </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Submit and return to tasklist
-    </button>
-  </div>
+    
 
       </form>
 

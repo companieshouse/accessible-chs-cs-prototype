@@ -245,4 +245,52 @@ router.post('/v1/registered-email-address', function (req, res) {
 });
 
 
+// registered office address routing
+
+router.post('/v1/registered-office-address', function (req, res) {
+  const officeAddress = req.body.officeAddress; // 'yes' or 'no'
+  if (req.body['office-submit']) {
+    if (officeAddress === 'yes') {
+      res.redirect('/v1/company-records');
+    } else if (officeAddress === 'no') {
+      res.redirect('/v1/update-registered-office'); 
+    } else if (officeAddress === 'noUpdate') {
+      res.redirect('/v1/company-records'); 
+    } 
+    else {
+      res.redirect('/v1/registered-office-address'); // fallback if nothing selected
+    }
+  } else if (req.body['office-submit-return']) {
+    // If the user clicks 'return', redirect to tasklist
+      if (officeAddress === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (officeAddress === 'no') {
+      res.redirect('/v1/update-office-address'); 
+      }
+      else if (officeAddress === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+      }
+  } else {
+    res.redirect('/v1/registered-office-address'); // fallback
+  }
+});
+
+
+// company records routing
+router.post('/v1/company-records', function (req, res) {
+  const companyRecords = req.body.companyRecords; // 'yes' or 'no'
+  
+    if (companyRecords === 'yes') {
+      res.redirect('/v1/tasklist');
+    } else if (companyRecords === 'no') {
+      res.redirect('/v1/update-records-location'); 
+    } else if (companyRecords === 'noUpdate') {
+      res.redirect('/v1/tasklist'); 
+    } 
+    else {
+      res.redirect('/v1/companyRecords'); // fallback if nothing selected
+    }
+ 
+});
+
 module.exports=router;
