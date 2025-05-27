@@ -190,7 +190,29 @@ router.post('/v1/pscs', function (req, res) {
   }
 });
 
+// shareholders routing
 
+router.post('/v1/shareholders', function (req, res) {
+  const shareholders = req.body.shareholders; // 'yes' or 'no'
+  if (req.body['shareholder-submit']) {
+    if (shareholders === 'yes') {
+      res.redirect('/v1/registered-email-address');
+    } else if (shareholders === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+    } else {
+      res.redirect('/v1/shareholders'); // fallback if nothing selected
+    }
+  } else if (req.body['shareholder-submit-return']) {
+    // If the user clicks 'return', redirect to tasklist
+      if (shareholders === 'yes') {
+      res.redirect('/v1/tasklist');
+      } else if (shareholders === 'no') {
+      res.redirect('/v1/you-cannot-use-this-service'); 
+      }
+  } else {
+    res.redirect('/v1/shareholders'); // fallback
+  }
+});
 
 
 
