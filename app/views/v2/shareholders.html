@@ -59,14 +59,13 @@
 
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="shareholders">
+  <fieldset class="govuk-fieldset" >
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h2 class="govuk-fieldset__heading">
         Are the shareholder details correct?
       </h2>
     </legend>
-        
- <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="shareholders" name="shareholders" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="shareholders">
@@ -74,14 +73,20 @@
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="shareholders-2" name="shareholders" type="radio" value="no">
+        <input class="govuk-radios__input" id="shareholders-2" name="shareholders" type="radio" value="noUpdate">
         <label class="govuk-label govuk-radios__label" for="shareholders-2">
+          No, but an update has been submitted
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="shareholders-3" name="shareholders" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="shareholders-3">
           No
         </label>
       </div>
     </div>
   </fieldset>
-  </div>
+</div>
 
 
         
