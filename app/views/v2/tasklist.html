@@ -1,0 +1,149 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  File a confirmation statement – {{ serviceName }} 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <form class="form" action="tasklist" method="post">
+
+      <h1 class="govuk-heading-l">
+       File a confirmation statement
+      </h1>
+
+      <p class="govuk-body">Check and confirm that the company information we have on record is correct as of 19 May 2025.</p>
+
+     
+     {# missing aria described by element #}
+      <p class="govuk-body">You have checked X of Y sections.</p>
+
+
+    <h2 class="govuk-heading-m">
+       Nature of business
+    </h2>
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="check-sic-codes">SIC codes</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag">
+        Completed
+      </strong>
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="check-statement-of-capital">Statement of capital</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+      </dl>
+
+
+  <h2 class="govuk-heading-m">
+      People
+  </h2>
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="officers">Officers</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag">
+        Completed
+      </strong>
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="pscs">People with significant control (PSCs)</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="shareholders">Shareholders</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+      </dl>
+
+
+    <h2 class="govuk-heading-m">
+      Addresses
+  </h2>
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="registered-email-address">Registered email address</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag">
+        Completed
+      </strong>
+    </dd>
+  </div>
+    <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="registered-office-address">Registered office address</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <a class="govuk-link" href="company-records">Register locations</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">
+        Incomplete
+      </strong>
+    </dd>
+  </div>
+      </dl>
+       
+
+     
+
+       
+<p class="govuk-body">You must complete all sections before you can submit.</p>
+        {{ govukButton({
+          text: "Submit",
+          disabled: true
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Confirm this is the correct company – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="confirm-company" method="post">
+
+      <h1 class="govuk-heading-l">
+        Confirm this is the correct company
+      </h1>
+
+      <h2 class="govuk-heading-l">
+       CROISSANT COMPANY
+      </h2>
+
+
+
+{# is the spacing right on this? #}
+    <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Company number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      01234567
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Active
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Incorporation date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      30 November 1995
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Company type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Private limited company
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of next confirmation statement
+    </dt>
+    <dd class="govuk-summary-list__value">
+     15 May 2026
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      To be filed by
+    </dt>
+    <dd class="govuk-summary-list__value">
+      20 June 2026
+    </dd>
+  </div>
+</dl>
+      
+
+        
+
+        {{ govukButton({
+          text: "Confirm and continue"
+        }) }}
+
+        <p class="govuk-body">
+          <a href="javascript:window.history.back()" class="govuk-link">Choose a different company</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

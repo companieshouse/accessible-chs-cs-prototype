@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check the standard industrial classification (SIC) codes – {{ serviceName }} 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="check-sic-codes" method="post">
+
+      <h1 class="govuk-heading-l">
+        Check the standard industrial classification (SIC) codes
+      </h1>
+
+      <p class="govuk-body">The SIC code indicates the nature of the company's business. A company can have up to 4 SIC codes.</p>
+      <p class="govuk-body">Check the <a class="govuk-link rel="noreferrer noopener" target="_blank"" href="#">condensed SIC codes list(opens in a new tab)</a>.</p>
+      </p>
+
+      <p class="govuk-body">Our records show these SIC codes for the company:</p>
+
+      <p class="govuk-body"><strong>43210</strong> - Electrical installation </p> 
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sicCode">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        Are the SIC codes correct?
+      </h2>
+    </legend>
+    
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sicCode" name="sicCode" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="sicCode">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sicCode-2" name="sicCode" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="sicCode-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+        
+
+  <div class="govuk-button-group">
+    <button name="sic-submit-next" value="sic-next" type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button name="sic-submit-return" value="sic-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

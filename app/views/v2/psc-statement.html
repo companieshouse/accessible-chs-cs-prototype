@@ -1,0 +1,88 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check the people of significant control (PSCs) statement – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/path/of/next/page" method="post">
+
+      <h1 class="govuk-heading-l">
+        Check the people of significant control (PSCs) statement
+      </h1>
+
+<p class="govuk-body">No additional statements relating to PSCs are currently held on the public register.</p>
+
+      <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     What is a PSC statement?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+   If a company has no people with significant control (PSCs), or is currently investigating who its PSCs are, it needs to file a statement to explain why its full PSC information is not yet on the public register. For example, if there is a PSC that has not yet been identified, or if a PSC has been identified but there details have not yet been confirmed.
+   <br>
+   <a href"#" class="govuk-link govuk-link--no-visited-state">Read the guidance for a full list of PSC statements.</a>
+  </div>
+</details>
+
+      
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="pscStatement">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+       Is the PSC statement correct?
+      </h2>
+    </legend>
+    {# <div id="sharesTradingStatus-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently
+    </div> #}
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="pscStatement" name="pscStatement" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="pscStatement">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="pscStatement-2" name="pscStatement" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="pscStatement-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="pscStatement-3" name="pscStatement" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="pscStatement-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

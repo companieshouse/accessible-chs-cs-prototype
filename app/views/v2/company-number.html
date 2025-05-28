@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What is the company number?– {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="company-number" method="post">
+
+      <h1 class="govuk-heading-l">
+       What is the company number?
+      </h1>
+{# do we have a common component for company number entry? #}
+{# have removed inset text with reference to the 8 characters with 0s #}
+{# have used the 10 character width from design system, but is there a way to make it 8 characters? #}
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="companyNumber">
+        Enter the 8 character company number
+        </label>
+          <input class="govuk-input govuk-input--width-10" id="companyNumber" name="companyNumber" type="text">
+      </div>
+
+    
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How do I find the company number?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          You an find this by searching for the company on the <a href="https://www.gov.uk/get-information-about-a-company" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House register (opens in a new tab)</a>.
+        </div>
+</details>
+
+
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ Check the statement of capital – {{ serviceName }} 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="check-statement-of-capital" method="post">
+
+      <h1 class="govuk-heading-l">
+       Check the statement of capital
+      </h1>
+
+      
+      <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Share capital
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Class of shares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Ordinary
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Currency
+        </dt>
+        <dd class="govuk-summary-list__value">
+          GBP
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Number of shares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Value of each share
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Total value
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Rights attached to this share type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Full rights to receive notice of, attend and vote at general meetings. Ibe share carries one vote, and full rights to dividends and capital distributions (including upone winding up).
+        </dd>
+      </div>
+
+
+    </dl>
+  </div>
+</div>
+
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Totals
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Currency
+        </dt>
+        <dd class="govuk-summary-list__value">
+          GBP
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of shares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total value of all shares
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total amount unpaid for all shares
+        </dt>
+        <dd class="govuk-summary-list__value">
+         0
+        </dd>
+        
+      </div>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="statementOfCapital">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        Is the statement of capital correct?
+      </h2>
+    </legend>
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="statementOfCapital" name="statementOfCapital" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="statementOfCapital">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="statementOfCapital-2" name="statementOfCapital" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="statementOfCapital-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="statementOfCapital-3" name="statementOfCapital" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="statementOfCapital-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+        
+
+  <div class="govuk-button-group">
+    <button name="capital-submit-next" value="capital-next" type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button name="capital-submit-return" value="capital-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

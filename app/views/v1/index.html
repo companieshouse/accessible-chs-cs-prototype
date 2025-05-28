@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+       V1 Index
+      </h1>
+
+      <ul class="govuk-list govuk-list--bullet">    
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/start">
+        Start
+        </a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/company-number">
+      Company number look up
+        </a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/confirm-company">Confirm company</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/authentication">Authentication</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/request-authentication">Request authentication</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/check-trading-status">Check trading status of shares</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/tasklist">Tasklist</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/check-sic-codes">Check SIC codes</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/check-statement-of-capital">Check statement of capital</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/officers">Check the officers</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/pscs">Check the PSCs</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/psc-statement">Check the PSC statement</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/shareholders">Check the shareholders</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/registered-email-address">Check the registered email address</a>
+      </li>
+       <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/registered-office-address">Check the registered office address</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/company-records">Check the company records</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/submit">Submit</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/confirmation">Confirmation</a>
+      </li>
+       <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/you-cannot-use-this-service">You cannot use this service</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/update-officer-details">Update officer details</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/update-psc-details">Update PSC details</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/update-registered-office">Update registered office address</a>
+      </li>
+      <li>
+        <a class="govuk-link govuk-link--no-visited-state" href="/v1/update-records-location">Update where the company records are kept</a>
+      </li>
+    </ul>
+
+      
+
+      
+
+    </div>
+  </div>
+
+{% endblock %}

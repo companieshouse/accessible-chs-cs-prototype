@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check where the company records are kept – {{ serviceName }} 
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="company-records" method="post">
+
+      <h1 class="govuk-heading-l">
+        Check where the company records are kept
+      </h1>
+
+      <p class="govuk-body">All company records are kept at the registered office address, or on the public record.</p>
+
+      
+
+       <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="companyRecords">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+       Is this where the company records are kept?
+      </h2>
+    </legend>
+    {# <div id="sharesTradingStatus-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently
+    </div> #}
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="companyRecords" name="companyRecords" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="companyRecords">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="companyRecords-2" name="companyRecords" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="companyRecords-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="companyRecords-3" name="companyRecords" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="companyRecords-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and return to tasklist
+    </button>
+    
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

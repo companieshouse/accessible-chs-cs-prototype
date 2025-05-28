@@ -1,0 +1,231 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check the officers' details – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="officers" method="post">
+
+      <h1 class="govuk-heading-l">
+       Check the officers' details
+      </h1>
+
+
+      <h2 class="govuk-heading-m">
+        2 directors
+      </h2>
+
+      
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      BUTTER, Bert
+    </h2>
+    <td class="govuk-table__cell">
+      <strong class="govuk-tag govuk-tag--green">
+          Active
+      </strong><span class="govuk-visually-hidden"> director </span>
+    </td>
+
+  </div>
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nationality
+        </dt>
+        <dd class="govuk-summary-list__value">
+          French
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Country of residence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UK
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          05 September 1980
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Appointment date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 July 2006
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Occupation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Director
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Correspondence address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <address class="govuk-body">1 High Street, London, SW1A 2AA</address>
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usual residential address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <address class="govuk-body">24 Croissant Lane, Croissant City, Croissantland, C15 3OS</address>
+        </dd>  
+      </div>
+
+    </dl>
+  </div>
+</div>
+
+
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      PASTRY, Patsy
+    </h2>
+    <td class="govuk-table__cell">
+      <strong class="govuk-tag govuk-tag--green">
+          Active
+      </strong><span class="govuk-visually-hidden"> director </span>
+    </td>
+
+  </div>
+
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nationality
+        </dt>
+        <dd class="govuk-summary-list__value">
+          French
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Country of residence
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UK
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          21 May 1990
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Appointment date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 July 2016
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Occupation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Director
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Correspondence address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <address class="govuk-body">1 High Street, London, SW1A 2AA</address>
+        </dd>  
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Usual residential address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <address class="govuk-body">24 Croissant Lane, Croissant City, Croissantland, C15 3OS</address>
+        </dd>  
+      </div>
+
+    </dl>
+  </div>
+</div>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="officers">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+        Are the officer details correct?
+      </h2>
+    </legend>
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="officers" name="officers" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="officers">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="officers-2" name="officers" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="officers-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="officers-3" name="officers" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="officers-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+        
+
+  <div class="govuk-button-group">
+    <button name="officer-submit" value="officer-submit" type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button name="officer-submit-return" value="officer-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

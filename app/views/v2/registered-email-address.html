@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check registered email address – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <form class="form" action="registered-email-address" method="post">
+
+      <h1 class="govuk-heading-l">
+        Check registered email address
+      </h1>
+
+      <p class="govuk-body">croissant@gmail.com</p>
+
+     
+ <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="registeredEmail">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-fieldset__heading">
+       Is the registered email address correct?
+      </h2>
+    </legend>
+    {# <div id="sharesTradingStatus-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently
+    </div> #}
+    <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="registeredEmail" name="registeredEmail" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="registeredEmail">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="registeredEmail-2" name="registeredEmail" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="registeredEmail-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="registeredEmail-3" name="registeredEmail" type="radio" value="noUpdate">
+        <label class="govuk-label govuk-radios__label" for="registeredEmail-3">
+          No, but an update has been submitted
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <div class="govuk-button-group">
+    <button name="email-submit" value="email-submit" type="submit" class="govuk-button" data-module="govuk-button">
+      Sumbit and go to next section
+    </button>
+    <button name="email-submit-return" value="email-submit-return" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Submit and return to tasklist
+    </button>
+  </div>
+        
+
+       
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
