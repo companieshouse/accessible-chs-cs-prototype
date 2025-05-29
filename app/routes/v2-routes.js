@@ -14,6 +14,16 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 router.post('/v2/start', function (req, res) {
 
+    res.redirect('/v2/sign-in')
+})
+
+router.post('/v2/sign-in', function (req, res) {
+
+    res.redirect('/v2/password')
+})
+
+router.post('/v2/password', function (req, res) {
+
     res.redirect('/v2/company-number')
 })
 
