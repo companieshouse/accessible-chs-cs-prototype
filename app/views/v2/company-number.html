@@ -20,18 +20,24 @@
     <div class="govuk-grid-column-two-thirds">
         <form class="form" action="company-number" method="post">
 
-      <h1 class="govuk-heading-l">
-       What is the company number?
-      </h1>
-{# do we have a common component for company number entry? #}
-{# have removed inset text with reference to the 8 characters with 0s #}
-{# have used the 10 character width from design system, but is there a way to make it 8 characters? #}
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="companyNumber">
-        Enter the 8 character company number
-        </label>
-          <input class="govuk-input govuk-input--width-10" id="companyNumber" name="companyNumber" type="text">
-      </div>
+      
+{# changed inputmode from numeric to text, as some company numbers can start with letters #}
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="company-number">
+      What is your company number?
+    </label>
+  </h1>
+  <div id="company-number-hint" class="govuk-hint">
+    Enter the 8 character company number.
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="account-number" name="companyNumber" type="text" spellcheck="false" aria-describedby="company-number-hint" inputmode="text">
+</div>
+
+
+
+  
 
     
       <details class="govuk-details">
