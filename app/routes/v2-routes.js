@@ -186,6 +186,12 @@ router.post('/v2/company-records', function (req, res) {
   }
 });
 
+//submit routing
+router.post('/v2/submit', function (req, res) {
+
+    res.redirect('/v2/confirmation')
+})
+
 
 
 
