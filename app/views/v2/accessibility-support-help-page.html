@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Mainstream guide example
+  Accessibility support for Companies House users - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -18,11 +18,11 @@
         href: "#"
       },
       {
-        text: "Section",
+        text: "Companies House",
         href: "#"
       },
       {
-        text: "Subsection"
+        text: "Accessibility support"
       }
     ]
   }) }}
@@ -38,23 +38,34 @@
         Accessibility support for Companies House users
       </h1>
 
+      <p class="govuk-body-l">
+        How we help users who need assistance because of a disability or health condition.
+      </p>
+
       <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
         <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
           <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
             Contents
           </h2>
           <ol class="govuk-prototype-kit-common-templates-contents-list__list">
-            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
-              <a href="#">
-                Page 1
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#support-to-use-our-services">
+                Support to use our services
               </a>
             </li>
-            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
-              Page 2
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#how-we-can-help">
+                How we can help
+              </a>
             </li>
             <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
-              <a href="#">
-                Page 3
+              <a href="#contact-us">
+                Contact us to discuss support
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#abilitynet">
+                Advice and support from AbilityNet
               </a>
             </li>
           </ol>
@@ -62,34 +73,93 @@
       </aside>
 
     </div>
-
   </div>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
       
-      <h2 class="govuk-heading-m">
-        Page content heading
+      <h2 class="govuk-heading-l" id="support-to-use-our-services">
+        Support to use our services
       </h2>
       
-      <p>Content goes here.</p>
+      <p class="govuk-body">We can provide extra support if you need it to use our services. For example, if you:</p>
 
-      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have sensory disabilities, like a visual, hearing or speech impairment</li>
+        <li>have reduced mobility or physical disabilities</li>
+        <li>have dyslexia, autism or cognitive difficulties</li>
+        <li>experience seizures</li>
+        <li>have mental health conditions, like depression, stress or anxiety</li>
+      </ul>
 
-      {{ govukPagination({
-        previous: {
-          labelText: "Page 1 title",
-          href: "#"
-        },
-        next: {
-          labelText: "Page 3 title",
-          href: "#"
-        }
-      }) }}
+      <p class="govuk-body">We can discuss what support we can provide to help you meet your responsibilities. With your permission, we can also add a note to our internal system so we can support you in the future.</p>
 
-      <p>
-        <a href="#">
-          View a printable version of the whole guide
+      <p class="govuk-body">For example, if you would prefer us to contact you by phone, we can call to remind you when your confirmation statement or accounts are due.</p>
+
+      <h2 class="govuk-heading-l" id="how-we-can-help">
+        How we can help
+      </h2>
+
+      <p class="govuk-body">We can:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>help you to complete online services or paper forms - a member of our customer support team will guide and support you through the process</li>
+        <li>provide alternative formats for paper forms</li>
+        <li>send you early reminders, or provide reminders in your preferred format</li>
+        <li>give you advice on speaking to a trusted friend or family member to get support</li>
+        <li>take calls through a video relay service, if you need to <a href="https://www.gov.uk/guidance/using-british-sign-language-to-contact-companies-house" class="govuk-link">contact us using British Sign Language (BSL)</a></li>
+      </ul>
+
+      <h2 class="govuk-heading-l" id="contact-us">
+        Contact us to discuss support
+      </h2>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body"><strong>Email:</strong> <a href="mailto:enquiries@companieshouse.gov.uk" class="govuk-link">enquiries@companieshouse.gov.uk</a></p>
+        
+        <p class="govuk-body"><strong>Telephone:</strong> 0303 1234 500 (you can ask for a Welsh speaker)</p>
+        
+        <p class="govuk-body"><strong>Textphone and Relay UK number:</strong> 0300 3730 995</p>
+        
+        <p class="govuk-body"><strong>Contact us using BSL:</strong> <a href="https://companieshouse.signvideo.net/" class="govuk-link">Call Companies House in BSL</a></p>
+        
+        <p class="govuk-body"><strong>Opening hours:</strong> Monday to Friday, 8:30am to 6pm</p>
+      </div>
+
+      <h3 class="govuk-heading-m">Write to us:</h3>
+      
+      <div class="govuk-body">
+        <p>Companies House<br>
+        Crown Way<br>
+        Cardiff<br>
+        CF14 3UZ</p>
+      </div>
+
+      <h2 class="govuk-heading-l" id="abilitynet">
+        Advice and support from AbilityNet
+      </h2>
+
+      <p class="govuk-body">AbilityNet offer technical advice and support for older people and disabled people of any age.</p>
+
+      <p class="govuk-body">This includes advice on making your device easier to use if you have a disability - for example, changing the colours of a website and helpful ways to make your keyboard, mouse and mobile device easier to use. It also gives guidance on using voice recognition to speak to your device.</p>
+
+      <p class="govuk-body">Read more about <a href="https://abilitynet.org.uk/free-tech-support-and-info" class="govuk-link">advice and support from AbilityNet</a>.</p>
+
+      <h2 class="govuk-heading-l">
+        Accessibility testing and user research
+      </h2>
+
+      <p class="govuk-body">To help us make our services accessible and easy to use, our researchers work to identify and understand our users. This includes testing our services with people who have accessibility needs.</p>
+
+      <h3 class="govuk-heading-m">Help us to improve our services</h3>
+
+      <p class="govuk-body">If you're interested in taking part in future research, <a href="https://www.gov.uk/government/news/help-improve-companies-house" class="govuk-link">join our Companies House user panel</a>.</p>
+
+      <p class="govuk-body">To give us feedback about an existing page or service, complete our survey.</p>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">
+          View a printable version of this guide
         </a>
       </p>
 
@@ -99,37 +169,33 @@
 
       <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
+          Related content
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li>
-              <a href="#">
-                Related link
+              <a href="#" class="govuk-link">
+                Using British Sign Language to contact Companies House
               </a>
             </li>
             <li>
-              <a href="#">
-                Related link
+              <a href="#" class="govuk-link">
+                Companies House contact details
               </a>
             </li>
             <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
+              <a href="#" class="govuk-link">
+                Help and support using Companies House services
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-link govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">about accessibility support</span>
               </a>
             </li>
           </ul>
         </nav>
       </aside>
-
-    </div>
-
-  </main>
-</div>
-
-
-
-
 
     </div>
   </div>
